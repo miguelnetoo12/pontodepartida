@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estudar · Ponto de Partida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="estudar">
+<header class="topo" id="topo"></header>
+
+<main class="pagina container">
+  <div class="cabeca-pagina">
+    <span class="sobretitulo">Estudar</span>
+    <h1 data-ler>Questões no estilo ENEM</h1>
+    <p class="suave" data-ler>250 questões em 5 áreas: Matemática, Linguagens, Humanas, Natureza e Informática básica. Cada resposta vem com explicação.</p>
+  </div>
+  <div id="estudar-lista">
+    <div class="destaques-estudo" id="cartoes-destaque"></div>
+    <h2 class="titulo-secao">Blocos por área</h2>
+    <div class="filtros" id="filtros-areas" role="group" aria-label="Escolher área"></div>
+    <div class="grade-blocos" id="grade-blocos"></div>
+  </div>
+  <div id="estudar-quiz" class="painel quiz" hidden></div>
+</main>
+
+<footer id="rodape"></footer>
+
+<script src="js/comum.js"></script>
+<script src="js/dados/questoes.js"></script>
+<script src="js/estudar.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Início · Ponto de Partida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="inicio">
+<header class="topo" id="topo"></header>
+
+<main class="pagina container">
+
+  <div class="boas-vindas">
+    <div>
+      <span class="sobretitulo">Início</span>
+      <h1 id="saudacao" data-ler>Olá!</h1>
+      <p class="suave" data-ler>O que você quer fazer hoje? Escolha um atalho ou siga a sua trilha.</p>
+      <nav class="atalhos-icones" aria-label="Atalhos">
+        <a href="estudar.html"><span aria-hidden="true">📚</span>Estudar</a>
+        <a href="redacao.html"><span aria-hidden="true">✍️</span>Redação</a>
+        <a href="faculdade.html"><span aria-hidden="true">🎓</span>Faculdade</a>
+        <a href="ler.html"><span aria-hidden="true">🔤</span>Aprender a ler</a>
+        <a href="solucoes.html"><span aria-hidden="true">💡</span>Soluções e dicas</a>
+        <a href="perfil.html"><span aria-hidden="true">🏅</span>Meu perfil</a>
+      </nav>
+    </div>
+    <div class="dica-dia">
+      <span class="sobretitulo">Dica do dia</span>
+      <h3 id="dica-dia-titulo"></h3>
+      <p id="dica-dia-texto"></p>
+      <div class="linha-botoes">
+        <button class="link-btn" id="outra-dica">Outra dica</button>
+        <button class="ouvir" id="ouvir-dica-dia">🔊 Ouvir</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="bloco-secao painel trilha" id="trilha" aria-label="Sua trilha"></section>
+
+  <section class="bloco-secao linha-engaja" aria-label="Desafio e nível">
+    <div class="painel desafio-dia" id="desafio-dia"></div>
+    <div class="painel nivel-resumo" id="nivel-resumo"></div>
+  </section>
+
+  <section class="bloco-secao" id="mitos">
+    <h2 data-ler>Mito ou verdade?</h2>
+    <p class="suave" data-ler>Muita gente desiste de estudar por causa de ideias que não são verdade. Toque em cada cartão para descobrir.</p>
+    <div class="grade-mitos" id="grade-mitos"></div>
+  </section>
+</main>
+
+<footer id="rodape"></footer>
+
+<script src="js/comum.js"></script>
+<script src="js/dados/conteudo.js"></script>
+<script src="js/inicio.js"></script>
+</body>
+</html>

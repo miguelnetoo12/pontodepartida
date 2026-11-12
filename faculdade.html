@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faculdade · Ponto de Partida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="faculdade">
+<header class="topo" id="topo"></header>
+
+<main class="pagina container">
+  <div class="cabeca-pagina">
+    <span class="sobretitulo">Faculdade</span>
+    <h1 data-ler>Depois da escola, qual é o próximo passo?</h1>
+    <p class="suave" data-ler>Veja como entrar de graça ou com bolsa, descubra sua área, encontre universidades no seu estado e simule sua nota.</p>
+  </div>
+  <div class="abas-pagina" role="tablist" aria-label="Seções da página Faculdade">
+    <button class="aba-pagina" role="tab" data-aba="como-entrar" aria-selected="false">Como entrar</button>
+    <button class="aba-pagina" role="tab" data-aba="descubra" aria-selected="false">Descubra sua área</button>
+    <button class="aba-pagina" role="tab" data-aba="universidades" aria-selected="false">Universidades</button>
+    <button class="aba-pagina" role="tab" data-aba="cursos" aria-selected="false">Cursos</button>
+    <button class="aba-pagina" role="tab" data-aba="simulador" aria-selected="false">Simulador de notas</button>
+  </div>
+  <section data-painel="como-entrar">
+    <div class="grade-ingresso" id="grade-ingresso"></div>
+  </section>
+  <section data-painel="descubra" hidden>
+    <h2 class="titulo-secao">Descubra sua área</h2>
+    <p class="suave" style="margin-bottom:16px">Responda 4 perguntas rápidas e veja os cursos que combinam com você.</p>
+    <div class="painel teste" id="teste-area"></div>
+  </section>
+  <section data-painel="universidades" hidden>
+    <p class="suave" style="margin-bottom:16px">Instituições públicas e gratuitas em todos os estados. Escolha o seu estado.</p>
+      <div class="filtros-inst-topo">
+        <label for="select-uf" class="rotulo-campo">Estado</label>
+        <select id="select-uf" class="seletor"></select>
+        <input type="search" id="busca-inst" class="busca" placeholder="Buscar por nome ou sigla…" aria-label="Buscar instituição">
+      </div>
+      <div class="filtros" id="filtros-inst" role="group" aria-label="Filtrar por tipo"></div>
+      <p class="contador" id="contador-inst"></p>
+      <div class="lista-instituicoes" id="lista-instituicoes"></div>
+      <div class="painel particulares">
+        <div>
+          <h3>Faculdades particulares com bolsa ou financiamento</h3>
+          <p class="suave">Milhares de faculdades particulares aceitam ProUni e FIES. Consulte as instituições e os cursos reconhecidos pelo MEC nos sites oficiais:</p>
+        </div>
+        <ul class="links-oficiais">
+          <li><a href="https://acessounico.mec.gov.br/prouni" target="_blank" rel="noopener">ProUni</a> <span class="suave">acessounico.mec.gov.br/prouni</span></li>
+          <li><a href="https://acessounico.mec.gov.br/sisu" target="_blank" rel="noopener">Sisu</a> <span class="suave">acessounico.mec.gov.br/sisu</span></li>
+          <li><a href="https://emec.mec.gov.br" target="_blank" rel="noopener">e-MEC: todas as faculdades credenciadas</a> <span class="suave">emec.mec.gov.br</span></li>
+        </ul>
+      </div>
+  </section>
+  <section data-painel="cursos" hidden>
+    <p class="suave" style="margin-bottom:16px">Bacharelados, licenciaturas e cursos tecnólogos, que são mais curtos.</p>
+    <div class="filtros" id="filtros-cursos"></div>
+    <div class="grade-cursos" id="grade-cursos"></div>
+  </section>
+  <section data-painel="simulador" hidden>
+    <div class="painel simulador" id="simulador-faculdade"></div>
+  </section>
+</main>
+
+<footer id="rodape"></footer>
+
+<script src="js/comum.js"></script>
+<script src="js/dados/conteudo.js"></script>
+<script src="js/dados/instituicoes.js"></script>
+<script src="js/dados/notas-corte.js"></script>
+<script src="js/simulador.js"></script>
+<script src="js/faculdade.js"></script>
+</body>
+</html>

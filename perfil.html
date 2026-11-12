@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu perfil · Ponto de Partida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="perfil">
+<header class="topo" id="topo"></header>
+
+<main class="pagina container">
+
+  <div class="perfil-topo">
+    <span class="perfil-avatar" id="perfil-avatar" aria-hidden="true"></span>
+    <div>
+      <span class="sobretitulo" style="margin:0">Meu perfil</span>
+      <h1 id="perfil-nome" data-ler></h1>
+    </div>
+  </div>
+  <div class="painel">
+    <div class="perfil-resumo" id="perfil-resumo"></div>
+    <div class="quiz-barra" style="margin:18px 0 6px"><div id="perfil-barra"></div></div>
+    <p class="suave" style="font-size:.88rem" id="perfil-prox"></p>
+  </div>
+
+  <section class="bloco-secao">
+    <h2 class="titulo-secao">Medalhas</h2>
+    <div class="medalhas medalhas-grandes" id="perfil-medalhas"></div>
+  </section>
+
+  <section class="bloco-secao perfil-grade">
+    <div class="painel"><h2 class="titulo-secao">Desempenho nas questões</h2><div id="perfil-desempenho"></div></div>
+    <div class="painel"><h2 class="titulo-secao">Minhas redações</h2><div id="perfil-redacoes"></div></div>
+    <div class="painel"><h2 class="titulo-secao">Dicas salvas</h2><div id="perfil-dicas"></div></div>
+    <div class="painel"><h2 class="titulo-secao">Meu momento</h2><p class="suave" style="margin-bottom:10px">Ele define a trilha da página Início.</p><div id="perfil-momento"></div></div>
+  </section>
+
+  <section class="bloco-secao painel conta">
+    <h2 class="titulo-secao">Conta</h2>
+    <p class="suave">Seu progresso fica salvo neste navegador. Se trocar de aparelho, ele não vai junto.</p>
+    <div class="linha-botoes" style="margin-top:14px">
+      <button class="btn btn-primario" id="btn-sair">Sair</button>
+      <button class="btn btn-secundario" id="btn-apagar">Apagar meu progresso</button>
+    </div>
+    <div class="confirmar-apagar" id="confirmar-apagar" hidden>
+      <p><b>Apagar pontos, medalhas, redações e dicas salvas?</b> Isso não pode ser desfeito.</p>
+      <div class="linha-botoes"><button class="btn btn-perigo" id="sim-apagar">Sim, apagar tudo</button><button class="btn btn-secundario" id="cancelar-apagar">Cancelar</button></div>
+    </div>
+  </section>
+</main>
+
+<footer id="rodape"></footer>
+
+<script src="js/comum.js"></script>
+<script src="js/dados/conteudo.js"></script>
+<script src="js/dados/temas.js"></script>
+<script src="js/perfil.js"></script>
+</body>
+</html>

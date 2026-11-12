@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ponto de Partida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="login">
+<div class="login">
+  <aside class="login-marca">
+    <span class="logo"><span class="logo-marca" aria-hidden="true"></span>Ponto de Partida</span>
+    <div>
+      <h1>Educação que <mark>diminui a distância</mark>.</h1>
+      <p>Terminou a escola e parou de estudar? Ainda dá tempo. Aqui você estuda para o ENEM de graça, descobre faculdades públicas perto de você, aprende a ler com áudio e ganha pontos e medalhas enquanto avança.</p>
+    </div>
+    <ul class="recursos-login">
+      <li><b>📚</b> 250 questões no estilo ENEM, com correção na hora</li>
+      <li><b>🎓</b> Universidades públicas de todos os estados</li>
+      <li><b>🔊</b> Leitura em voz alta para quem está aprendendo a ler</li>
+      <li><b>✍️</b> Treino de redação com nota estimada</li>
+      <li><b>🏆</b> Desafio do dia, níveis e medalhas</li>
+    </ul>
+  </aside>
+
+  <main class="login-form-area">
+    <div class="painel continuar" id="continuar" hidden>
+      <p>Você já entrou como <b id="continuar-nome"></b>.</p>
+      <div class="linha-botoes"><button class="btn btn-primario" id="btn-continuar">Continuar</button><button class="link-btn" id="btn-trocar">Entrar com outra conta</button></div>
+    </div>
+    <form class="login-caixa" id="form-entrar" novalidate>
+      <div class="linha-botoes" style="justify-content:space-between">
+        <h2>Entrar</h2>
+        <button type="button" class="ouvir" data-falar="Bem-vindo ao Ponto de Partida. Se você ainda não sabe ler bem, aperte o botão amarelo grande, escrito Entrar sem senha, com leitura em voz alta.">🔊 Ouvir</button>
+      </div>
+      <button type="button" class="btn btn-grande" id="btn-facil" style="background:var(--lapis);border-color:var(--lapis);color:#14213d">🔊 Entrar sem senha, com leitura em voz alta</button>
+      <div class="separador">ou entre com sua conta</div>
+      <div class="form-grade">
+        <div class="campo"><label for="entrar-email">E-mail</label><input type="email" id="entrar-email" autocomplete="email" placeholder="voce@email.com"></div>
+        <div class="campo"><label for="entrar-senha">Senha</label><input type="password" id="entrar-senha" autocomplete="current-password" placeholder="Sua senha"></div>
+      </div>
+      <p class="erro" id="erro-entrar" role="alert"></p>
+      <button type="submit" class="btn btn-primario">Entrar</button>
+      <div class="linha-botoes" style="justify-content:space-between">
+        <button type="button" class="link-btn" id="btn-visitante">Entrar como visitante</button>
+        <button type="button" class="link-btn" id="ir-cadastro">Criar conta</button>
+      </div>
+      <p class="aviso-prototipo">Protótipo: qualquer e-mail e senha funcionam. A senha não é enviada nem guardada; seu progresso fica salvo só neste navegador.</p>
+    </form>
+
+    <form class="login-caixa" id="form-cadastro" novalidate hidden>
+      <div><h2>Criar conta</h2><p class="suave">Leva menos de um minuto.</p></div>
+      <div class="form-grade">
+        <div class="campo"><label for="cad-nome">Nome</label><input type="text" id="cad-nome" autocomplete="name" placeholder="Como quer ser chamado"></div>
+        <div class="campo"><label for="cad-email">E-mail</label><input type="email" id="cad-email" autocomplete="email" placeholder="voce@email.com"></div>
+        <div class="campo"><label for="cad-senha">Senha</label><input type="password" id="cad-senha" autocomplete="new-password" placeholder="Mínimo de 6 caracteres"></div>
+      </div>
+      <p class="erro" id="erro-cadastro" role="alert"></p>
+      <button type="submit" class="btn btn-primario">Criar conta e entrar</button>
+      <p class="suave">Já tem conta? <button type="button" class="link-btn" id="ir-entrar">Entrar</button></p>
+    </form>
+  </main>
+</div>
+
+<script src="js/comum.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

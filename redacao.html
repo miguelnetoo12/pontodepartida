@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redação · Ponto de Partida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="redacao">
+<header class="topo" id="topo"></header>
+
+<main class="pagina container">
+
+    <div id="redacao-temas">
+      <div class="cabeca-pagina">
+        <span class="sobretitulo">Redação</span>
+        <h1 data-ler>Treine a redação do ENEM</h1>
+        <p class="suave" data-ler>Escolha um dos 20 temas, leia os textos de apoio e escreva um texto dissertativo-argumentativo de 7 a 30 linhas. No final, veja sua nota estimada nas 5 competências do ENEM e os cursos que essa nota pode abrir.</p>
+      </div>
+      <div class="filtros" id="filtros-temas" role="group" aria-label="Filtrar temas"></div>
+      <div class="linha-botoes" style="margin-bottom:18px"><button class="btn btn-secundario" id="btn-tema-aleatorio">🎲 Sortear um tema</button></div>
+      <div class="grade-temas" id="grade-temas"></div>
+      <div class="painel" id="historico-redacoes" style="margin-top:24px"></div>
+    </div>
+
+    <div id="redacao-editor" hidden>
+      <button class="link-btn" id="voltar-temas">← Voltar aos temas</button>
+      <div class="editor-grade">
+        <aside class="painel apoio-caixa">
+          <span class="tag" id="editor-area"></span>
+          <h2 class="editor-tema" id="editor-tema"></h2>
+          <p class="suave" style="font-size:.92rem">Com base nos textos de apoio e no que você sabe, escreva um texto dissertativo-argumentativo sobre o tema, em norma-padrão, com uma proposta de intervenção que respeite os direitos humanos.</p>
+          <button class="ouvir" id="ouvir-apoio" style="justify-self:start">🔊 Ouvir tema e textos</button>
+          <div id="apoio" class="apoio"></div>
+          <details class="estrutura">
+            <summary>Como organizar sua redação</summary>
+            <ol>
+              <li><b>Introdução:</b> apresente o tema, traga um repertório (lei, dado, autor, fato histórico) e diga sua tese.</li>
+              <li><b>Desenvolvimento 1:</b> primeiro argumento, explicando a causa (“isso ocorre porque…”) com exemplo ou dado.</li>
+              <li><b>Desenvolvimento 2:</b> segundo argumento, mostrando consequências (“o que gera…”).</li>
+              <li><b>Conclusão:</b> proposta com agente, ação, meio, finalidade e detalhamento.</li>
+            </ol>
+          </details>
+        </aside>
+        <div class="painel folha-caixa">
+          <div class="folha-topo">
+            <div class="contadores">
+              <span class="contador-pill" id="cont-linhas">0/30 linhas</span>
+              <span class="contador-pill" id="cont-paragrafos">0 parágrafos</span>
+              <span class="contador-pill" id="cont-palavras">0 palavras</span>
+            </div>
+            <div class="cronometro-caixa"><span class="num cronometro" id="cronometro">00:00</span><button class="btn btn-secundario btn-pequeno" id="btn-cronometro">Iniciar cronômetro</button></div>
+          </div>
+          <label for="titulo-redacao" class="rotulo-campo">Título (opcional)</label>
+          <input type="text" id="titulo-redacao" class="titulo-input" placeholder="Dê um título à sua redação">
+          <label for="texto-redacao" class="rotulo-campo">Sua redação</label>
+          <textarea id="texto-redacao" class="folha" placeholder="Comece pela introdução. Aperte Enter para começar um novo parágrafo." spellcheck="true"></textarea>
+          <p class="suave" style="font-size:.82rem">O rascunho fica salvo neste navegador enquanto você escreve. Cada linha estimada tem cerca de 70 caracteres, como na folha do ENEM.</p>
+          <button class="btn btn-primario" id="btn-corrigir" disabled>Enviar para correção</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="redacao-resultado" hidden>
+      <div id="resultado-redacao"></div>
+      <div class="painel bloco-secao simulador" id="simulador-redacao"></div>
+    </div>
+</main>
+
+<footer id="rodape"></footer>
+
+<script src="js/comum.js"></script>
+<script src="js/dados/temas.js"></script>
+<script src="js/dados/notas-corte.js"></script>
+<script src="js/simulador.js"></script>
+<script src="js/redacao.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aprender a ler · Ponto de Partida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="ler">
+<header class="topo" id="topo"></header>
+
+<main class="pagina container">
+
+    <div class="ler-intro">
+      <div class="cabeca-pagina" style="margin:0">
+        <span class="sobretitulo">Aprender a ler</span>
+        <h1 data-ler>Nunca é tarde para aprender a ler</h1>
+        <p class="suave" data-ler>Aqui tudo tem áudio. Aperte o botão com o alto-falante para ouvir. Comece pelas letras, depois junte as sílabas e por fim reconheça palavras.</p>
+      </div>
+      <div class="painel">
+        <button class="btn btn-primario btn-ouvir-grande" id="ouvir-instrucoes-ler">🔊 Ouvir como funciona</button>
+        <span class="suave" style="font-size:.9rem">Dica: ligue o <b>Modo fácil</b> no topo da tela para deixar as letras maiores.</span>
+      </div>
+    </div>
+
+    <div class="bloco-secao">
+      <h2>1. As letras</h2>
+      <p class="suave">Toque em uma letra para ouvir o som e uma palavra que começa com ela.</p>
+      <div class="alfabeto" id="alfabeto"></div>
+    </div>
+
+    <div class="bloco-secao">
+      <h2>2. Juntar sílabas e reconhecer palavras</h2>
+      <p class="suave">Duas atividades para treinar. Você pode repetir quantas vezes quiser.</p>
+      <div class="duas-atividades">
+        <div class="painel atividade" id="ativ-silabas"></div>
+        <div class="painel atividade" id="ativ-ouvir"></div>
+      </div>
+    </div>
+
+    <div class="bloco-secao">
+      <h2>Onde estudar perto de você</h2>
+      <p class="suave">A Educação de Jovens e Adultos (EJA) é gratuita e tem turmas à noite. Procure a secretaria de educação da sua cidade ou a escola pública mais perto de casa e pergunte pela EJA.</p>
+    </div>
+</main>
+
+<footer id="rodape"></footer>
+
+<script src="js/comum.js"></script>
+<script src="js/dados/conteudo.js"></script>
+<script src="js/ler.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soluções e dicas · Ponto de Partida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="solucoes">
+<header class="topo" id="topo"></header>
+
+<main class="pagina container">
+  <div class="cabeca-pagina">
+    <span class="sobretitulo">Soluções e dicas</span>
+    <h1 data-ler>O que dá para fazer contra a desigualdade na educação</h1>
+    <p class="suave" data-ler>Soluções que já funcionam, dicas práticas para começar hoje e os números do problema.</p>
+  </div>
+  <div class="abas-pagina" role="tablist" aria-label="Seções da página Soluções e dicas">
+    <button class="aba-pagina" role="tab" data-aba="solucoes" aria-selected="false">Soluções</button>
+    <button class="aba-pagina" role="tab" data-aba="dicas" aria-selected="false">Dicas</button>
+    <button class="aba-pagina" role="tab" data-aba="numeros" aria-selected="false">Os números</button>
+  </div>
+  <section data-painel="solucoes">
+    <p class="suave" style="margin-bottom:16px">Cada cartão mostra um problema real e o que escolas, governos, comunidades e famílias podem fazer.</p>
+    <div class="filtros" id="filtros-solucoes"></div>
+    <div class="grade-solucoes" id="lista-solucoes"></div>
+  </section>
+  <section data-painel="dicas" hidden>
+    <p class="suave" style="margin-bottom:16px">Filtre por quem você é e salve as dicas que quer colocar em prática. As salvas aparecem no seu perfil.</p>
+    <div class="filtros" id="filtros-dicas">
+      <input type="search" id="busca-dicas" class="busca" placeholder="Buscar dica…" aria-label="Buscar dicas">
+    </div>
+    <p class="contador" id="contador-dicas"></p>
+    <div class="grade-dicas" id="lista-dicas"></div>
+  </section>
+  <section data-painel="numeros" hidden>
+    <p class="suave" style="margin-bottom:16px">A escolaridade no Brasil ainda depende de onde a pessoa nasce e da cor da pele.</p>
+    <div class="faixa-numeros">
+      <div><strong class="num">4,9%</strong><span>dos brasileiros com 15 anos ou mais não sabem ler e escrever</span></div>
+      <div><strong class="num">8,4 mi</strong><span>de analfabetos, 58% deles com 60 anos ou mais</span></div>
+      <div><strong class="num">7,7 mi</strong><span>de jovens de 14 a 29 anos sem ensino médio completo</span></div>
+      <div><strong class="num">43%</strong><span>desses jovens deixaram a escola para trabalhar</span></div>
+    </div>
+    <div class="grade-graficos">
+      <div class="painel"><h3>Analfabetismo por região</h3><p class="suave grafico-sub">Pessoas com 15 anos ou mais (%)</p>
+        <div class="barras"><div class="barra-linha"><span>Nordeste</span><div class="barra-trilho"><div class="barra-valor" style="width:88.3%;background:var(--alerta)"></div></div><span class="barra-num num">10,6%</span></div><div class="barra-linha"><span>Norte</span><div class="barra-trilho"><div class="barra-valor" style="width:47.5%;background:var(--tinta)"></div></div><span class="barra-num num">5,7%</span></div><div class="barra-linha"><span>Centro-Oeste</span><div class="barra-trilho"><div class="barra-valor" style="width:27.5%;background:var(--tinta)"></div></div><span class="barra-num num">3,3%</span></div><div class="barra-linha"><span>Sul</span><div class="barra-trilho"><div class="barra-valor" style="width:20.0%;background:var(--tinta)"></div></div><span class="barra-num num">2,4%</span></div><div class="barra-linha"><span>Sudeste</span><div class="barra-trilho"><div class="barra-valor" style="width:19.2%;background:var(--tinta)"></div></div><span class="barra-num num">2,3%</span></div></div></div>
+      <div class="painel"><h3>Brancos e pretos ou pardos</h3><p class="suave grafico-sub">Jovens de 18 a 24 anos cursando faculdade (%)</p>
+        <div class="barras"><div class="barra-linha"><span>Brancos</span><div class="barra-trilho"><div class="barra-valor" style="width:83.5%;background:var(--tinta)"></div></div><span class="barra-num num">33,4%</span></div><div class="barra-linha"><span>Pretos ou pardos</span><div class="barra-trilho"><div class="barra-valor" style="width:47.2%;background:var(--alerta)"></div></div><span class="barra-num num">18,9%</span></div></div>
+        <p class="suave grafico-sub" style="margin-top:16px">Adultos (25+) com ensino médio completo (%)</p>
+        <div class="barras"><div class="barra-linha"><span>Brancos</span><div class="barra-trilho"><div class="barra-valor" style="width:64.9%;background:var(--tinta)"></div></div><span class="barra-num num">64,9%</span></div><div class="barra-linha"><span>Pretos ou pardos</span><div class="barra-trilho"><div class="barra-valor" style="width:51.3%;background:var(--alerta)"></div></div><span class="barra-num num">51,3%</span></div></div></div>
+      <div class="painel"><h3>Por que deixaram a escola?</h3><p class="suave grafico-sub">Jovens de 14 a 29 anos sem ensino médio (%)</p>
+        <div class="barras"><div class="barra-linha"><span>Precisar trabalhar</span><div class="barra-trilho"><div class="barra-valor" style="width:86.0%;background:var(--alerta)"></div></div><span class="barra-num num">43,0%</span></div><div class="barra-linha"><span>Falta de interesse</span><div class="barra-trilho"><div class="barra-valor" style="width:51.2%;background:var(--tinta)"></div></div><span class="barra-num num">25,6%</span></div><div class="barra-linha"><span>Gravidez</span><div class="barra-trilho"><div class="barra-valor" style="width:19.8%;background:var(--tinta)"></div></div><span class="barra-num num">9,9%</span></div><div class="barra-linha"><span>Saúde</span><div class="barra-trilho"><div class="barra-valor" style="width:8.8%;background:var(--tinta)"></div></div><span class="barra-num num">4,4%</span></div><div class="barra-linha"><span>Cuidar da casa ou de alguém</span><div class="barra-trilho"><div class="barra-valor" style="width:7.8%;background:var(--tinta)"></div></div><span class="barra-num num">3,9%</span></div></div></div>
+    </div>
+    <p class="fonte">Fonte: IBGE, PNAD Contínua Educação 2025, divulgada em junho de 2026.</p>
+  </section>
+</main>
+
+<footer id="rodape"></footer>
+
+<script src="js/comum.js"></script>
+<script src="js/dados/conteudo.js"></script>
+<script src="js/solucoes.js"></script>
+</body>
+</html>
